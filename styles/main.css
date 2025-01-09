@@ -1,0 +1,1144 @@
+:root {
+    --color-primario: #ffffff;
+    --color-secundario: #d4af37;
+    --color-texto: #000000;
+    --color-fondo: #ffffff;
+    --color-gris-claro: #f5f5f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+.header {
+    background-color: var(--color-primario);
+    padding: 1rem;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: var(--color-texto);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--color-secundario);
+}
+
+.hero {
+    position: relative;
+    height: 60vh;
+    width: 100%;
+    background-image: url('assets/images/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    max-width: 600px;
+    padding: 1.5rem;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button {
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    background-color: var(--color-secundario);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #b38f1d;
+    transform: translateY(-2px);
+}
+
+/* Diseño responsive */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-menu {
+        gap: 1rem;
+    }
+}
+
+/* Contenedor general */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Sección de horarios */
+.horarios {
+    padding: 4rem 0;
+    background-color: var(--color-fondo);
+}
+
+.horarios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.horario-item {
+    background-color: var(--color-fondo);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(12, 12, 12, 0.1);
+    max-width: 400px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.horario-item .dia {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-texto);
+    margin-bottom: 0.5rem;
+}
+
+.horario-item .hora {
+    font-size: 1.1rem;
+    color: var(--color-secundario);
+}
+
+/* Sección de servicios mejorada */
+.servicios-destacados {
+    padding: 4rem 0;
+    background-color: var(--color-fondo);
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.servicio-card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.servicio-card:hover {
+    transform: translateY(-5px);
+}
+
+.servicio-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.servicio-card h4 {
+    color: var(--color-primario);
+    margin-bottom: 1rem;
+}
+
+.servicio-card .precio {
+    color: var(--color-secundario);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.servicio-card .descripcion {
+    color: #474747;
+    margin-bottom: 1.5rem;
+}
+
+.servicio-icon {
+    font-size: 2.5rem;
+    color: var(--color-secundario);
+    margin-bottom: 1.5rem;
+}
+
+.reservar-btn {
+    background-color: var(--color-secundario);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reservar-btn:hover {
+    background-color: #b38f1d;
+}
+
+/* Sección de experiencia */
+.experiencia {
+    padding: 4rem 0;
+    background-color: var(--color-primario);
+}
+
+.experiencia-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.experiencia-item {
+    text-align: center;
+    padding: 2rem;
+}
+
+.experiencia-item i {
+    font-size: 2.5rem;
+    color: var(--color-secundario);
+    margin-bottom: 1rem;
+}
+
+/* Modal de Reserva */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 95%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.close-modal {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    z-index: 1;
+}
+
+#formReserva {
+    padding-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--color-secundario);
+    box-shadow: 0 0 0 2px rgba(179, 143, 29, 0.1);
+}
+
+.submit-btn {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--color-secundario);
+    border: none;
+    border-radius: 5px;
+    color: var(--color-primario);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #b38f1d;
+}
+
+/* Footer mejorado */
+.footer {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-info h4,
+.footer-social h4 {
+    color: var(--color-secundario);
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: rgb(83, 83, 83);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--color-secundario);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .modal-content {
+        margin: 10px auto;
+        width: 95%;
+        padding: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .servicios-grid,
+    .horarios-grid,
+    .experiencia-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Actualización de estilos para las tarjetas de servicios */
+.servicio-img {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--color-gris-claro);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.servicio-img:hover {
+    transform: scale(1.05);
+}
+
+.servicio-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(0.9);
+}
+
+/* Ajuste adicional para las tarjetas */
+.servicio-card {
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la carga de imágenes */
+.reference-upload {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.image-preview {
+    min-height: 100px;
+    border: 2px dashed var(--color-gris-claro);
+    border-radius: 8px;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-fondo);
+}
+
+.image-preview:empty::before {
+    content: 'La imagen se mostrará aquí';
+    color: var(--color-texto);
+    opacity: 0.5;
+}
+
+.image-preview img {
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+/* Estilos para la navegación activa */
+.nav-menu a.active {
+    color: var(--color-secundario);
+    font-weight: 600;
+}
+
+/* Añadir al archivo CSS existente */
+.horarios-info {
+    margin-top: 0.5rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.horarios-info small {
+    display: block;
+    line-height: 1.4;
+}
+
+/* Estilos para el calendario y citas */
+.calendario-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.cita-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-left: 4px solid var(--color-secundario);
+}
+
+.cita-card.pendiente {
+    border-left-color: var(--color-secundario);
+}
+
+.cita-card.cancelada {
+    border-left-color: #ff4444;
+    opacity: 0.7;
+}
+
+.cita-acciones {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.cita-acciones button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cita-acciones button:first-child {
+    background-color: #ff4444;
+    color: white;
+}
+
+.cita-acciones button:last-child {
+    background-color: var(--color-secundario);
+    color: white;
+}
+
+/* Estilos para la previsualización de imagen */
+.image-preview {
+    margin-top: 1rem;
+    max-width: 200px;
+    max-height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 2px dashed var(--color-secundario);
+    padding: 4px;
+}
+
+.image-preview img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Indicador de carga */
+.loading-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.loading-indicator span {
+    padding: 1rem 2rem;
+    background: var(--color-secundario);
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Estilos para los cupos */
+.cupos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.cupo-item {
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cupo-item.disponible {
+    background-color: var(--color-gris-claro);
+    border: 2px solid var(--color-secundario);
+}
+
+.cupo-item.ocupado {
+    background-color: #f8f8f8;
+    border: 2px solid #ccc;
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.cupo-item .hora {
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: block;
+}
+
+.cupo-item .cliente {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+/* Panel del barbero */
+.panel-barbero {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.proximas-citas {
+    margin-top: 1.5rem;
+}
+
+.cita-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--color-gris-claro);
+}
+
+.cita-info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.cita-acciones {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.cita-acciones button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cita-acciones button:first-child {
+    background-color: var(--color-secundario);
+    color: white;
+}
+
+.cita-acciones button:last-child {
+    background-color: #ff4444;
+    color: white;
+}
+
+/* Añadir estos estilos para los iconos SVG */
+.servicio-img {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    padding: 1rem;
+    background-color: var(--color-gris-claro);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.servicio-icon {
+    width: 100%;
+    height: 100%;
+    color: var(--color-secundario);
+}
+
+.servicio-card:hover .servicio-img {
+    transform: scale(1.1);
+    background-color: var(--color-secundario);
+}
+
+.servicio-card:hover .servicio-icon {
+    color: white;
+}
+
+/* Estilos para el modal de recordatorio */
+.modal-recordatorio {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.recordatorio-opciones {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.opciones-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.opciones-lista button {
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: var(--color-secundario);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.opciones-lista button:hover {
+    background: #b38f1d;
+}
+
+.opciones-lista i {
+    font-size: 1.2rem;
+}
+
+.test-notification-btn {
+    padding: 10px 20px;
+    background-color: var(--color-secundario);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.test-notification-btn:hover {
+    background-color: #b38f1d;
+}
+
+/* Estilos para las citas */
+.citas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.cita-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.cita-card.cancelada {
+    opacity: 0.7;
+    background-color: #f8f8f8;
+    border-left: 4px solid #ff4444;
+}
+
+.cita-info {
+    margin-bottom: 1rem;
+}
+
+.estado-cita {
+    margin-top: 0.5rem;
+    font-weight: 600;
+}
+
+.cita-acciones {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-recordar, .btn-cancelar {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-recordar {
+    background-color: var(--color-secundario);
+    color: white;
+}
+
+.btn-cancelar {
+    background-color: #ff4444;
+    color: white;
+}
+
+.btn-recordar:hover {
+    background-color: #b38f1d;
+}
+
+.btn-cancelar:hover {
+    background-color: #cc3333;
+}
+
+.no-citas {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-style: italic;
+    background: #f8f8f8;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* Estilos para el input de teléfono */
+.phone-input-group {
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.phone-input-container {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    width: 100%;
+}
+
+.country-select {
+    width: 110px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: white;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    background-size: 1em;
+    padding-right: 30px;
+}
+
+input[type="tel"] {
+    flex: 1;
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* Mejoras para dispositivos móviles */
+@media screen and (max-width: 480px) {
+    .modal-content {
+        padding: 15px;
+        margin: 10px;
+        width: auto;
+    }
+
+    .phone-input-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .country-select {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    input[type="tel"] {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    /* Hacer el texto del select más legible en móvil */
+    .country-select option {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+/* Estilos para el formulario completo */
+.form-group {
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+/* Mejoras visuales para los inputs */
+input[type="text"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--color-secundario);
+    box-shadow: 0 0 0 2px rgba(179, 143, 29, 0.1);
+}
+
+/* Estilo para el botón de cerrar */
+.close-modal {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    z-index: 1;
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.select-style {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.select-style:hover {
+    background-color: #45a049;
+}
+
+.reservar-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.reservar-btn:hover {
+    background-color: #45a049;
+}
+
+.phone-input {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.country-code {
+    width: 100px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#telefono {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Estilos para el contenedor del teléfono */
+.phone-input {
+    display: flex;
+    width: 100%;
+    position: relative;
+    gap: 8px;
+}
+
+/* Select del código de país */
+.country-code {
+    width: 15%; /* Reducido de 25% a 15% */
+    min-width: 90px; /* Asegura un ancho mínimo para el contenido */
+    max-width: 100px; /* Limita el ancho máximo */
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Input del teléfono */
+#telefono {
+    flex: 1; /* Toma el espacio restante */
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Estilos para las opciones del select */
+.country-code option {
+    padding: 8px;
+    font-size: 14px;
+}
+
+/* Focus states */
+.country-code:focus,
+#telefono:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .country-code {
+        width: 20%;
+        min-width: 80px;
+    }
+}
+
+/* Estilos para el select de hora */
+#hora {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: white;
+    cursor: pointer;
+}
+
+#hora:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+#hora option {
+    padding: 8px;
+    font-size: 14px;
+}
+
+/* Deshabilitar opciones no disponibles */
+#hora option[disabled] {
+    color: #999;
+    background-color: #f5f5f5;
+}
+
+/* Agregar estos estilos */
+.almuerzo-info {
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
+    padding: 4px 8px;
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    border-radius: 4px;
+}
+
+#hora option[disabled] {
+    color: #999;
+    font-style: italic;
+    background-color: #f5f5f5;
+}
+
+/* Agregar estos estilos */
+.dias-info {
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
+    padding: 4px 8px;
+    background-color: #e7f3ff;
+    border: 1px solid #b3d7ff;
+    border-radius: 4px;
+}
+
+.almuerzo-info {
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
+    padding: 4px 8px;
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    border-radius: 4px;
+} 

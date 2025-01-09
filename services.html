@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Barbería Elegante</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/services.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1>Barbería Los Diques</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="services.html">Servicios</a></li>
+                <li><a href="gallery.html">Galería</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="services-hero">
+            <div class="container">
+                <h2>Nuestros Servicios</h2>
+                <p>Calidad y profesionalismo en cada corte</p>
+            </div>
+        </section>
+
+        <section class="services-list">
+            <div class="container">
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <div class="service-details">
+                        <h3>Corte Clásico</h3>
+                        <p>Corte tradicional con acabado profesional</p>
+                        <ul class="service-features">
+                            <li>Consulta personalizada</li>
+                            <li>Lavado de cabello</li>
+                            <li>Corte y estilizado</li>
+                            <li>Acabado con productos premium</li>
+                        </ul>
+                        <div class="service-price">
+                            <span>Desde $20</span>
+                            <button onclick="reservarServicio('Corte Clásico')" class="reservar-btn">
+                                Reservar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-razor"></i>
+                    </div>
+                    <div class="service-details">
+                        <h3>Arreglo de Barba</h3>
+                        <p>Perfilado y arreglo completo de barba</p>
+                        <ul class="service-features">
+                            <li>Limpieza facial</li>
+                            <li>Perfilado de barba</li>
+                            <li>Tratamiento hidratante</li>
+                            <li>Aceites especiales</li>
+                        </ul>
+                        <div class="service-price">
+                            <span>Desde $15</span>
+                            <button onclick="reservarServicio('Barba')" class="reservar-btn">
+                                Reservar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="service-details">
+                        <h3>Combo Completo</h3>
+                        <p>Servicio completo de corte y barba</p>
+                        <ul class="service-features">
+                            <li>Corte de cabello</li>
+                            <li>Arreglo de barba</li>
+                            <li>Tratamiento facial</li>
+                            <li>Productos premium</li>
+                        </ul>
+                        <div class="service-price">
+                            <span>Desde $30</span>
+                            <button onclick="reservarServicio('Combo')" class="reservar-btn">
+                                Reservar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <!-- Copiar el footer del index.html -->
+    </footer>
+
+    <!-- Modal de Reserva -->
+    <div id="modalReserva" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Reserva tu Cita</h2>
+            <form id="formReserva" onsubmit="enviarReserva(event)">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <div class="phone-input">
+                        <select id="country-code" class="country-code">
+                            <option value="506">CR +506</option>
+                            <option value="503">SV +503</option>
+                            <option value="502">GT +502</option>
+                            <option value="504">HN +504</option>
+                            <option value="505">NI +505</option>
+                            <option value="507">PA +507</option>
+                            <option value="501">BZ +501</option>
+                        </select>
+                        <input type="tel" id="telefono" 
+                               pattern="[0-9]{4}-[0-9]{4}" 
+                               placeholder="XXXX-XXXX" 
+                               required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="servicio">Servicio:</label>
+                    <select id="servicio" required>
+                        <option value="">Selecciona un servicio</option>
+                        <option value="Corte Clásico">Corte Clásico</option>
+                        <option value="Barba">Arreglo de Barba</option>
+                        <option value="Combo">Combo Completo</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="barbero">Barbero:</label>
+                    <select id="barbero" required>
+                        <option value="">Selecciona un barbero</option>
+                        <option value="50670469306">Daniel</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" id="fecha" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="hora">Hora:</label>
+                    <select id="hora" required>
+                        <option value="">Selecciona una hora</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-btn">Reservar Cita</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts/disponibilidad.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/services.js"></script>
+</body>
+</html> 
